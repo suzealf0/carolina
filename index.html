@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Aniversário - Ana Carolina</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button id="music-toggle" class="music-toggle">
+        <svg class="icon-sound-on hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 001.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.66 1.905H6.44l4.5 4.5a1.5 1.5 0 002.56-1.06V4.06zM18.584 5.106a.75.75 0 011.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 11-1.06-1.06 8.25 8.25 0 000-11.668.75.75 0 010-1.06z" /><path d="M15.932 7.757a.75.75 0 011.061 0 6 6 0 010 8.486.75.75 0 11-1.06-1.061 4.5 4.5 0 000-6.364.75.75 0 010-1.06z" /></svg>
+        <svg class="icon-sound-off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 001.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.66 1.905H6.44l4.5 4.5a1.5 1.5 0 002.56-1.06V4.06zM17.28 9.53a.75.75 0 10-1.06 1.06L18.94 12l-2.72 2.72a.75.75 0 101.06 1.06L20 13.06l2.72 2.72a.75.75 0 101.06-1.06L21.06 12l2.72-2.72a.75.75 0 10-1.06-1.06L20 10.94l-2.72-2.72z" /></svg>
+    </button>
+    <audio id="backgroundMusic" loop>
+        <source src="./musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="animation-container">
+        <div class="sun-background"></div>
+        
+        <div class="animated-element beer">
+            <img src="cerveja.svg" alt="Cerveja flutuando">
+        </div>
+        <div class="animated-element beer">
+            <img src="cerveja.svg" alt="Cerveja flutuando">
+        </div>
+        <div class="animated-element beer">
+            <img src="cerveja.svg" alt="Cerveja flutuando">
+        </div>
+        <div class="animated-element beer">
+            <img src="cerveja.svg" alt="Cerveja flutuando">
+        </div>
+        <div class="animated-element beer">
+            <img src="cerveja.svg" alt="Cerveja flutuando">
+        </div>
+
+        <svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color: var(--color-wave-start);" />
+                    <stop offset="100%" style="stop-color: var(--color-wave-end);" />
+                </linearGradient>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="wave-group">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="url(#wave-gradient)" opacity="0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="url(#wave-gradient)" opacity="0.5" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="url(#wave-gradient)" opacity="0.3" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="url(#wave-gradient)" opacity="1" />
+            </g>
+        </svg>
+
+        <div class="boto-container">
+            <div class="animated-element boto boto-1">
+                <img src="boto.svg" alt="Boto pulando">
+            </div>
+            <div class="animated-element boto boto-2">
+                <img src="boto.svg" alt="Boto pulando">
+            </div>
+        </div>
+    </div>
+
+    <main class="card">
+        <header>
+            <div class="sun-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.59a.75.75 0 01-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.894 17.894a.75.75 0 011.06 0l1.59 1.591a.75.75 0 01-1.06 1.06l-1.591-1.59a.75.75 0 010-1.061zM12 18.75a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25a.75.75 0 01.75-.75zM4.106 17.894a.75.75 0 010-1.06l1.59-1.591a.75.75 0 011.061 1.06l-1.59 1.59a.75.75 0 01-1.06 0zM3 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3.75A.75.75 0 013 12zM6.106 6.106a.75.75 0 011.06 0l1.591 1.59a.75.75 0 01-1.06 1.061l-1.59-1.59a.75.75 0 010-1.06z"/></svg>
+            </div>
+            <p>Você está convidado para o aniversário da</p>
+            <h1 class="title">Ana Carolina</h1>
+        </header>
+
+        <section class="carousel-section">
+            <div class="carousel-container">
+                <div class="carousel-image-container">
+                    <img id="carousel-image-1" class="carousel-image active" src="ana1.png" alt="Foto da Ana">
+                    <img id="carousel-image-2" class="carousel-image" src="" alt="Foto da Ana">
+                </div>
+                <span class="carousel-prev">&#10094;</span>
+                <span class="carousel-next">&#10095;</span>
+                <div class="carousel-counter"></div>
+            </div>
+        </section>
+
+        <section class="invitation-text">
+            <p>Prepare a roupa de banho!</p>
+            <p>Vamos celebrar em um flutuante com muito banho de rio, música boa, cerveja gelada e amigos.</p>
+            <p>Sua presença é importante!</p>
+        </section>
+
+        <section class="details">
+            <div class="detail-item">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 2.25a.75.75 0 01.75.75v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H3.75a3 3 0 01-3-3V7.5a3 3 0 013-3h.75V3.75A.75.75 0 016 3a.75.75 0 01.75-.75zM3.75 9h16.5V7.5a1.5 1.5 0 00-1.5-1.5h-13.5A1.5 1.5 0 003.75 7.5v1.5z" clip-rule="evenodd" /></svg></div>
+                <h3>Quando?</h3>
+                <p>Sábado, 18 de Outubro de 2025<br>A partir das 11:00h</p>
+            </div>
+            <div class="detail-item">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 3.75a3 3 0 00-3 3v.75h21v-.75a3 3 0 00-3-3h-15z" /><path fill-rule="evenodd" d="M22.5 9.75h-21v7.5a3 3 0 003 3h15a3 3 0 003-3v-7.5zm-18 3.75a.75.75 0 01.75-.75h6a.75.75 0 010 1.5h-6a.75.75 0 01-.75-.75z" clip-rule="evenodd" /></svg></div>
+                <h3>Onde?</h3>
+                <p>Flutuante que vamos decidir ainda<br><a href="https://acesse.one/aniversariodacarol" target="_blank">Ver no mapa!</a></p>
+            </div>
+            <div class="detail-item">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.25 3v2.25a2.25 2.25 0 01-2.25 2.25H3.75v2.25a2.25 2.25 0 01-2.25 2.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18v-7.5a2.25 2.25 0 01-2.25-2.25V7.5h-5.25A2.25 2.25 0 019 5.25V3h2.25z" /><path d="M9 3.75A2.25 2.25 0 0111.25 1.5h1.5A2.25 2.25 0 0115 3.75v1.5A2.25 2.25 0 0112.75 7.5h-1.5A2.25 2.25 0 019 5.25v-1.5z" /></svg></div>
+                <h3>O Clima?</h3>
+                <p>Muito banho de rio, música e cerveja gelada!</p>
+            </div>
+        </section>
+
+        <section class="countdown-section">
+            <h2>Faltam apenas...</h2>
+            <div id="countdown">
+                <div class="time-unit">
+                    <span id="days">00</span>
+                    <label>Dias</label>
+                </div>
+                <div class="time-unit">
+                    <span id="hours">00</span>
+                    <label>Horas</label>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes">00</span>
+                    <label>Minutos</label>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds">00</span>
+                    <label>Segundos</label>
+                </div>
+            </div>
+        </section>
+
+        <a href="COLOQUE_SEU_LINK_DE_RSVP_AQUI" target="_blank" class="rsvp-button">Confirmar Presença</a>
+    </main>
+    
+    <div id="sparkle-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
