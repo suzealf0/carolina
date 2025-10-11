@@ -1,8 +1,10 @@
 /* Importando fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Bangers&family=Permanent+Marker&family=Special+Elite&family=Rock+Salt&display=swap');
 
+/* VERSÃO FINAL E RESPONSIVA */
 :root {
-    --color-background: #F8F2E8;
+    --color-background-start: #FFF1E6;
+    --color-background-end: #F0EFEB;
     --color-card-background: #FFFFFF;
     --color-text: #4A4A4A;
     --color-primary: #DD4A48;
@@ -15,9 +17,7 @@
 body {
     font-family: var(--font-body);
     color: var(--color-text);
-    background-color: var(--color-background);
-    /* NOVA TEXTURA DE PAPEL */
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAARlJREFUaIHt071KA0EUB/BfFEtLK8EbKFhY2GkvYKEPoOffsFNYiB9fwS5sLFQUBAURQVAQBEEQBMF/z95sNplM5g9zz5z5nyXJ00ZfhF5Ex0QfnU5nkd9lBD4Re3pPRG/NZrNE/rGfF3Vb1d5A/MxyvYjYqKqJz+djsWjL9+M8F1fVE323VfV/NpvF4/GYzWaPq3pPVF3VlVdVEz8fJs9qvi4v6paqHnX/rqrJ8/k8FovFxWKRTCb5vG+V/Gpl/r3NZrPZbJbI/EREMpmc+XweDocDAwPDo6Oj4/n5+aOjo6Pj8/lYPenw8LA/34/jO5vNfD5/bW1t+XweDocDAwPDw8PDc11bAwdBEOxHRAR/v74/Y20jAAAAAElFTkSuQmCC');
+    background: linear-gradient(135deg, var(--color-background-start), var(--color-background-end));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,6 +40,36 @@ body {
     border: 1px solid rgba(0,0,0,0.05);
 }
 
+/* --- BOTÃO DE MÚSICA --- */
+.music-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #eee;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+    transition: transform 0.2s ease;
+}
+.music-toggle:hover {
+    transform: scale(1.1);
+}
+.music-toggle svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-text);
+}
+.music-toggle .hidden {
+    display: none;
+}
+
 /* --- CABEÇALHO E TÍTULO --- */
 header { margin-bottom: 25px; }
 header p { font-size: 1rem; color: #777; margin: 0 0 10px 0; }
@@ -48,7 +78,11 @@ header p { font-size: 1rem; color: #777; margin: 0 0 10px 0; }
 
 /* --- EFEITO LETRAS RECORTADAS (RANSOM) --- */
 .ransom-effect { white-space: nowrap; }
-.ransom-effect span { display: inline-block; position: relative; font-size: 4rem; }
+.ransom-effect span {
+    display: inline-block;
+    position: relative;
+    font-size: 4rem;
+}
 .subtitle.ransom-effect span { font-size: 2.8rem; }
 .s1 { font-family: 'Bangers', cursive; color: var(--color-primary); transform: rotate(-4deg); }
 .s2 { font-family: 'Special Elite', monospace; color: var(--color-text); transform: rotate(2deg); }
@@ -69,7 +103,13 @@ header p { font-size: 1rem; color: #777; margin: 0 0 10px 0; }
 
 /* --- TEXTO E DETALHES --- */
 .invitation-text { margin: 30px 0; font-size: 1.1rem; line-height: 1.7; }
-.details { display: flex; gap: 20px; margin: 30px 0; padding-top: 20px; border-top: 1px solid #eee; }
+.details {
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
 .detail-item { flex: 1; }
 .detail-item .icon { font-size: 1.5rem; }
 .detail-item h3 { margin: 5px 0; font-size: 1.1rem; color: var(--color-primary); }
@@ -87,36 +127,53 @@ header p { font-size: 1rem; color: #777; margin: 0 0 10px 0; }
 /* --- BOTÃO DE RSVP --- */
 .rsvp-button { background-color: var(--color-primary); color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: inline-block; margin-top: 10px; }
 .rsvp-button:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
-.music-toggle { /* ... seu código anterior ... */ }
 
-/* --- NOVA ANIMAÇÃO DE DOODLES --- */
-.background-doodles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; overflow: hidden; pointer-events: none; }
-.doodle { position: absolute; bottom: -100px; opacity: 0; animation: float-around 20s ease-in-out infinite; }
-.doodle svg { width: 100%; height: 100%; }
-.doodle path { fill: var(--color-accent); stroke: var(--color-accent); }
+/* --- ANIMAÇÃO DE FUNDO --- */
+.confetti-container { /* Mantido da versão anterior */ }
+.confetti { /* Mantido da versão anterior */ }
+@keyframes fall { /* Mantido da versão anterior */ }
 
-.doodle-1 { width: 60px; left: 10%; animation-delay: 0s; }
-.doodle-2 { width: 40px; left: 20%; animation-delay: 5s; animation-duration: 25s; }
-.doodle-3 { width: 50px; left: 35%; animation-delay: 8s; }
-.doodle-4 { width: 70px; left: 50%; animation-delay: 3s; animation-duration: 18s; }
-.doodle-5 { width: 30px; left: 65%; animation-delay: 12s; }
-.doodle-6 { width: 60px; left: 80%; animation-delay: 15s; animation-duration: 22s; }
-.doodle-7 { width: 45px; left: 90%; animation-delay: 6s; }
-.doodle-2 path, .doodle-5 path { fill: var(--color-secondary); }
-.doodle-4 path, .doodle-7 path { fill: var(--color-primary); }
-
-@keyframes float-around {
-    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-    10% { opacity: 0.3; }
-    50% { transform: translateY(-50vh) rotate(180deg); }
-    90% { opacity: 0.3; }
-    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-}
-
-@media (max-width: 480px) {
-    .card { padding: 20px; }
-    .details { flex-direction: column; }
-    .countdown-section { margin: 30px -20px 30px -20px; padding: 20px; }
-    .ransom-effect span { font-size: 3rem; }
-    .subtitle.ransom-effect span { font-size: 2rem; }
+/* --- AJUSTES PARA CELULAR (RESPONSIVIDADE) --- */
+@media (max-width: 540px) {
+    body {
+        padding: 0;
+        align-items: flex-start;
+    }
+    .card {
+        margin: 0;
+        border-radius: 0;
+        padding: 20px;
+        min-height: 100vh;
+        border: none;
+    }
+    .ransom-effect span {
+        font-size: 3rem;
+    }
+    .subtitle.ransom-effect span {
+        font-size: 2.1rem;
+    }
+    .details {
+        flex-direction: column;
+        gap: 25px; /* Aumenta o espaço quando empilhado */
+    }
+    .countdown-section {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 20px;
+    }
+    #countdown {
+        gap: 10px;
+    }
+    .time-unit span {
+        font-size: 1.5rem;
+        padding: 8px;
+        min-width: 40px;
+    }
+    .invitation-text {
+        font-size: 1rem;
+    }
+    .rsvp-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
 }
